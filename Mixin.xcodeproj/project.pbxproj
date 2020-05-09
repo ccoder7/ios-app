@@ -411,6 +411,7 @@
 		7BD5A88A233228D900DD4E9A /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD5A889233228D900DD4E9A /* WebViewController.swift */; };
 		7BD639CA2282B17B00B7B3A6 /* PeerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD639C82282B17B00B7B3A6 /* PeerViewController.swift */; };
 		7BD639CB2282B17B00B7B3A6 /* PeerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BD639C92282B17B00B7B3A6 /* PeerView.xib */; };
+		7BD695292466A73F0083D33C /* PostDocumentStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD695282466A73F0083D33C /* PostDocumentStyle.swift */; };
 		7BD7055F215BAEDE00639FA8 /* PeerTransactionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD7055E215BAEDE00639FA8 /* PeerTransactionsViewController.swift */; };
 		7BD7534C2182CD7A00BAC172 /* CallMessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD7534B2182CD7A00BAC172 /* CallMessageViewModel.swift */; };
 		7BD7534E2182CDCE00BAC172 /* IconPrefixedTextMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD7534D2182CDCE00BAC172 /* IconPrefixedTextMessageCell.swift */; };
@@ -1221,6 +1222,7 @@
 		7BD5A889233228D900DD4E9A /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		7BD639C82282B17B00B7B3A6 /* PeerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeerViewController.swift; sourceTree = "<group>"; };
 		7BD639C92282B17B00B7B3A6 /* PeerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PeerView.xib; sourceTree = "<group>"; };
+		7BD695282466A73F0083D33C /* PostDocumentStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDocumentStyle.swift; sourceTree = "<group>"; };
 		7BD7055E215BAEDE00639FA8 /* PeerTransactionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeerTransactionsViewController.swift; sourceTree = "<group>"; };
 		7BD7534B2182CD7A00BAC172 /* CallMessageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallMessageViewModel.swift; sourceTree = "<group>"; };
 		7BD7534D2182CDCE00BAC172 /* IconPrefixedTextMessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconPrefixedTextMessageCell.swift; sourceTree = "<group>"; };
@@ -1787,6 +1789,7 @@
 				7B015F4E241F91A60004A563 /* SearchResultAnnotation.swift */,
 				7B082D17242CA19F00C5E163 /* MultipleSelectionIntent.swift */,
 				7BE6C7EB242DF07B00A0F2AE /* MessageAction.swift */,
+				7BD695282466A73F0083D33C /* PostDocumentStyle.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -3744,6 +3747,7 @@
 				7B51DDBB223A52A0008ACDBB /* LoginVerificationCodeViewController.swift in Sources */,
 				7B2E3E521FA07F7B00DDDDEB /* CountryCell.swift in Sources */,
 				7B5EA41220B2734C00940D1A /* GalleryVideoSlider.swift in Sources */,
+				7BD695292466A73F0083D33C /* PostDocumentStyle.swift in Sources */,
 				7B7DACAA23505F06006AA2AC /* SharedMediaAudio.swift in Sources */,
 				DF5D9F231F9C79E10036D5FD /* Localized.swift in Sources */,
 				7B51DDB0223A3A6F008ACDBB /* MobileNumberViewController.swift in Sources */,
