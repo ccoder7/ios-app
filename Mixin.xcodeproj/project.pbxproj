@@ -411,6 +411,7 @@
 		7BD5A88A233228D900DD4E9A /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD5A889233228D900DD4E9A /* WebViewController.swift */; };
 		7BD639CA2282B17B00B7B3A6 /* PeerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD639C82282B17B00B7B3A6 /* PeerViewController.swift */; };
 		7BD639CB2282B17B00B7B3A6 /* PeerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BD639C92282B17B00B7B3A6 /* PeerView.xib */; };
+		7BD695272466A6CC0083D33C /* PostSnapshotter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD695262466A6CC0083D33C /* PostSnapshotter.swift */; };
 		7BD695292466A73F0083D33C /* PostDocumentStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD695282466A73F0083D33C /* PostDocumentStyle.swift */; };
 		7BD7055F215BAEDE00639FA8 /* PeerTransactionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD7055E215BAEDE00639FA8 /* PeerTransactionsViewController.swift */; };
 		7BD7534C2182CD7A00BAC172 /* CallMessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD7534B2182CD7A00BAC172 /* CallMessageViewModel.swift */; };
@@ -1222,6 +1223,7 @@
 		7BD5A889233228D900DD4E9A /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		7BD639C82282B17B00B7B3A6 /* PeerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeerViewController.swift; sourceTree = "<group>"; };
 		7BD639C92282B17B00B7B3A6 /* PeerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PeerView.xib; sourceTree = "<group>"; };
+		7BD695262466A6CC0083D33C /* PostSnapshotter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostSnapshotter.swift; sourceTree = "<group>"; };
 		7BD695282466A73F0083D33C /* PostDocumentStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDocumentStyle.swift; sourceTree = "<group>"; };
 		7BD7055E215BAEDE00639FA8 /* PeerTransactionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeerTransactionsViewController.swift; sourceTree = "<group>"; };
 		7BD7534B2182CD7A00BAC172 /* CallMessageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallMessageViewModel.swift; sourceTree = "<group>"; };
@@ -1790,6 +1792,7 @@
 				7B082D17242CA19F00C5E163 /* MultipleSelectionIntent.swift */,
 				7BE6C7EB242DF07B00A0F2AE /* MessageAction.swift */,
 				7BD695282466A73F0083D33C /* PostDocumentStyle.swift */,
+				7BD695262466A6CC0083D33C /* PostSnapshotter.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -3645,6 +3648,7 @@
 				7B28FA16201196DD0023B28D /* DataMessageViewModel.swift in Sources */,
 				DFB6CE2323C485D400FB6615 /* SystemConversationAction+Description.swift in Sources */,
 				7B59534F2267215B00D59DB4 /* BottomShadowView.swift in Sources */,
+				7BD695272466A6CC0083D33C /* PostSnapshotter.swift in Sources */,
 				7B6EC8FC20A91543009A7020 /* VideoUploadJob.swift in Sources */,
 				7BC03AB22424EA9B00931D21 /* StorageUsageCell.swift in Sources */,
 				DFC0ECCE23BB5FDE0091E7AC /* EmergencySessionRequest.swift in Sources */,
