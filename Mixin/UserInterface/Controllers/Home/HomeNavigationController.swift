@@ -7,6 +7,8 @@ class HomeNavigationController: UINavigationController {
     
     private lazy var presentFromBottomAnimator = PresentFromBottomAnimator()
     
+    private(set) var isTransitioning = false
+    
     override var childForStatusBarStyle: UIViewController? {
         if let web = activeWebViewController {
             return web
@@ -49,6 +51,14 @@ class HomeNavigationController: UINavigationController {
 }
 
 extension HomeNavigationController: UINavigationControllerDelegate {
+    
+    func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool) {
+        isTransitioning = true
+    }
+    
+    func navigationController(_ navigationController: UINavigationController, didShow viewController: UIViewController, animated: Bool) {
+        isTransitioning = false
+    }
     
     func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationController.Operation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         if operation == .push {

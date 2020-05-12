@@ -11,26 +11,41 @@ class PostSnapshotter {
         self.markdown = markdown
     }
     
-    func make() -> UIImage? {
+    func make(width: CGFloat, style: UserInterfaceStyle) -> UIImage? {
+        guard let navigationController = UIApplication.homeNavigationController, !navigationController.isTransitioning else {
+            // Mounting views into window while navigation controller
+            // is transitioning makes the animation flickers
+            return nil
+        }
         guard let document = try? Document(text: markdown) else {
             return nil
         }
-        guard let root = UIApplication.homeNavigationController else {
+        guard let parent = UIApplication.homeContainerViewController else {
             return nil
         }
-        let style = PostDocumentStyle()
-        let controller = SynchornousDocumentViewController(document: document, style: style)
-        root.addChild(controller)
-        root.view.insertSubview(controller.view, at: 0)
-        controller.view.snp.makeConstraints { (make) in
-            make.edges.equalTo(root.view.safeAreaLayoutGuide)
+        let documentStyle = PostDocumentStyle()
+        let controller = SynchornousDocumentViewController(document: document, style: documentStyle)
+        if #available(iOS 13.0, *) {
+            controller.overrideUserInterfaceStyle = style.uiUserInterfaceStyle
         }
-        controller.didMove(toParent: root)
+        parent.addChild(controller)
+        parent.view.insertSubview(controller.view, at: 0)
+        let canvasWidth = width + documentStyle.insets.paragraph.horizontal
+        controller.view.snp.makeConstraints { (make) in
+            make.top.bottom.leading.equalTo(parent.view.safeAreaLayoutGuide)
+            make.width.equalTo(canvasWidth)
+        }
+        controller.didMove(toParent: parent)
+        parent.view.layoutIfNeeded()
         var contentSize = controller.node.collectionNode.view.contentSize
         contentSize.height = min(controller.view.frame.height, contentSize.height)
         let renderer = UIGraphicsImageRenderer(size: contentSize)
         let image = renderer.image { (ctx) in
-            controller.view.drawHierarchy(in: controller.view.bounds, afterScreenUpdates: true)
+            let canvas = CGRect(x: -documentStyle.insets.paragraph.left,
+                                y: -documentStyle.insets.paragraph.top,
+                                width: controller.view.bounds.width,
+                                height: controller.view.bounds.height)
+            controller.view.drawHierarchy(in: canvas, afterScreenUpdates: true)
         }
         controller.willMove(toParent: nil)
         controller.view.removeFromSuperview()
@@ -59,32 +74,27 @@ extension PostSnapshotter {
     
     private class SynchornousDocumentViewController: ASViewController<SynchornousDocumentNode> {
         
-        public var documentStyle: DocumentStyle {
+        var documentStyle: DocumentStyle {
             didSet {
                 node.documentStyle = documentStyle
             }
         }
         
-        public init(document: Document, style: DocumentStyle = DefaultDocumentStyle()) {
+        init(document: Document, style: DocumentStyle = DefaultDocumentStyle()) {
             self.documentStyle = style
             super.init(node: SynchornousDocumentNode(document: document, style: style))
         }
         
-        public required init?(coder aDecoder: NSCoder) {
+        required init?(coder aDecoder: NSCoder) {
             fatalError("init(coder:) has not been implemented")
         }
         
-        open override func viewDidLoad() {
+        override func viewDidLoad() {
             super.viewDidLoad()
             view.backgroundColor = .clear
         }
         
-        override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
-            super.traitCollectionDidChange(previousTraitCollection)
-            documentStyle = PostDocumentStyle()
-        }
-        
-        open func reload() {
+        func reload() {
             node.reload()
         }
         

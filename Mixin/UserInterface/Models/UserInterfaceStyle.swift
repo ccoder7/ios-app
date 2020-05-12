@@ -1,6 +1,6 @@
 import Foundation
 
-enum UserInterfaceStyle {
+@objc enum UserInterfaceStyle: Int {
     
     static var current: UserInterfaceStyle {
         if #available(iOS 12.0, *) {
@@ -22,6 +22,16 @@ enum UserInterfaceStyle {
             self = .dark
         @unknown default:
             self = .light
+        }
+    }
+    
+    @available(iOS 12.0, *)
+    var uiUserInterfaceStyle: UIUserInterfaceStyle {
+        switch self {
+        case .light:
+            return .light
+        case .dark:
+            return .dark
         }
     }
     
