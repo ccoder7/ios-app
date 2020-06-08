@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait" appearance="dark"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -372,16 +372,44 @@
                                         <constraint firstAttribute="height" constant="4" id="rGV-vx-zL5"/>
                                     </constraints>
                                 </view>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalCompressionResistancePriority="749" text="Happy Birthday!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3g0-U4-ZFa">
-                                    <rect key="frame" x="95.5" y="186.5" width="104" height="17"/>
-                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                    <color key="textColor" name="text"/>
-                                    <nil key="highlightedColor"/>
-                                    <userDefinedRuntimeAttributes>
-                                        <userDefinedRuntimeAttribute type="string" keyPath="dynamicTextSize" value="regular14"/>
-                                    </userDefinedRuntimeAttributes>
-                                </label>
+                                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8oR-zJ-rXa">
+                                    <rect key="frame" x="0.0" y="186.5" width="295" height="17"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalCompressionResistancePriority="749" text="Happy Birthday!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3g0-U4-ZFa">
+                                            <rect key="frame" x="0.0" y="0.0" width="295" height="17"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" name="text"/>
+                                            <nil key="highlightedColor"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="dynamicTextSize" value="regular14"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="3g0-U4-ZFa" firstAttribute="trailing" secondItem="Lug-Kq-TLz" secondAttribute="trailing" id="3vE-t1-vde"/>
+                                        <constraint firstAttribute="height" priority="750" constant="17" id="4Gc-yg-8Go"/>
+                                        <constraint firstItem="3g0-U4-ZFa" firstAttribute="bottom" secondItem="Lug-Kq-TLz" secondAttribute="bottom" id="8Tc-xi-EPM"/>
+                                        <constraint firstItem="3g0-U4-ZFa" firstAttribute="top" secondItem="Lug-Kq-TLz" secondAttribute="top" id="CSK-kf-ull"/>
+                                        <constraint firstItem="3g0-U4-ZFa" firstAttribute="width" secondItem="Ofh-Cf-a9g" secondAttribute="width" id="HDS-zZ-L0P"/>
+                                        <constraint firstItem="3g0-U4-ZFa" firstAttribute="leading" secondItem="Lug-Kq-TLz" secondAttribute="leading" id="XUE-GS-llL"/>
+                                        <constraint firstAttribute="height" relation="lessThanOrEqual" constant="72" id="eGY-Lo-Eep" customClass="ScreenSizeCompatibleLayoutConstraint" customModule="Mixin" customModuleProvider="target">
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="inch4_7">
+                                                    <real key="value" value="60"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="inch4">
+                                                    <real key="value" value="30"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="inch3_5">
+                                                    <real key="value" value="30"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </constraint>
+                                    </constraints>
+                                    <viewLayoutGuide key="contentLayoutGuide" id="Lug-Kq-TLz"/>
+                                    <viewLayoutGuide key="frameLayoutGuide" id="Ofh-Cf-a9g"/>
+                                </scrollView>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oXe-5X-NEr" userLabel="PINView">
                                     <rect key="frame" x="27.5" y="203.5" width="240" height="101"/>
                                     <subviews>
@@ -662,6 +690,10 @@
                                 </view>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="8oR-zJ-rXa" firstAttribute="leading" secondItem="qOs-Lg-MP3" secondAttribute="leading" id="5ni-La-CXc"/>
+                                <constraint firstAttribute="trailing" secondItem="8oR-zJ-rXa" secondAttribute="trailing" id="IS6-Qc-eQk"/>
+                            </constraints>
                         </stackView>
                     </subviews>
                     <color key="backgroundColor" name="background"/>
@@ -707,6 +739,8 @@
                 <outlet property="loadingView" destination="MtN-so-wKF" id="7Fm-S3-1J0"/>
                 <outlet property="memoLabel" destination="3g0-U4-ZFa" id="iY1-5L-GFv"/>
                 <outlet property="memoPlaceView" destination="5f3-GA-Aig" id="wjZ-YA-vSJ"/>
+                <outlet property="memoScrollView" destination="8oR-zJ-rXa" id="2YW-xW-1hn"/>
+                <outlet property="memoScrollViewHeightConstraint" destination="4Gc-yg-8Go" id="RkA-p9-Ec6"/>
                 <outlet property="mixinIDLabel" destination="Xua-9X-dAo" id="7MT-iH-wwO"/>
                 <outlet property="multisigActionView" destination="InA-gq-86H" id="sui-ED-mIX"/>
                 <outlet property="multisigStackView" destination="qGj-IP-qzY" id="6qZ-C5-mAX"/>

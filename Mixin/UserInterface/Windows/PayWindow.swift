@@ -25,6 +25,7 @@ class PayWindow: BottomSheetView {
     @IBOutlet weak var mixinIDLabel: UILabel!
     @IBOutlet weak var amountLabel: UILabel!
     @IBOutlet weak var amountExchangeLabel: UILabel!
+    @IBOutlet weak var memoScrollView: UIScrollView!
     @IBOutlet weak var memoLabel: UILabel!
     @IBOutlet weak var memoPlaceView: UIView!
     @IBOutlet weak var assetIconView: AssetIconView!
@@ -56,6 +57,7 @@ class PayWindow: BottomSheetView {
     @IBOutlet weak var bigAmountTitleSpaceView: UIView!
     @IBOutlet weak var bigAmountIconSpaceView: UIView!
 
+    @IBOutlet weak var memoScrollViewHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var sendersButtonWidthConstraint: NSLayoutConstraint!
     @IBOutlet weak var receiversButtonWidthConstraint: NSLayoutConstraint!
 
@@ -203,7 +205,8 @@ class PayWindow: BottomSheetView {
         memoLabel.isHidden = memo.isEmpty
         memoPlaceView.isHidden = memo.isEmpty
         memoLabel.text = memo
-
+        memoScrollViewHeightConstraint.constant = memoLabel.intrinsicContentSize.height
+        
         dismissButton.isEnabled = true
         if showBigAmountTips {
 
