@@ -121,111 +121,123 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
-                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BtE-5x-Sut" customClass="AvatarImageView" customModule="Mixin" customModuleProvider="target">
-                                                            <rect key="frame" x="20" y="15" width="50" height="50"/>
-                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="50" id="Zlt-9C-O7b"/>
-                                                                <constraint firstAttribute="width" constant="50" id="v1y-3N-PYp"/>
-                                                            </constraints>
-                                                            <userDefinedRuntimeAttributes>
-                                                                <userDefinedRuntimeAttribute type="boolean" keyPath="hasShadow" value="YES"/>
-                                                            </userDefinedRuntimeAttributes>
-                                                        </view>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="bUb-Bj-2TW">
-                                                            <rect key="frame" x="86" y="20" width="269" height="42.5"/>
+                                                        <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3gq-1E-cfc">
+                                                            <rect key="frame" x="20" y="0.0" width="335" height="80"/>
                                                             <subviews>
-                                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="A9Y-Y8-Hwn">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="269" height="19.5"/>
-                                                                    <subviews>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="500" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" text="OVER140" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="67N-Qm-IWN">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="68.5" height="19.5"/>
-                                                                            <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
-                                                                            <color key="textColor" name="text"/>
-                                                                            <nil key="highlightedColor"/>
-                                                                        </label>
-                                                                        <imageView hidden="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="750" verticalHuggingPriority="251" image="ic_user_bot" translatesAutoresizingMaskIntoConstraints="NO" id="Jnj-lJ-Kay">
-                                                                            <rect key="frame" x="71.5" y="0.0" width="0.0" height="19.5"/>
-                                                                        </imageView>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="4:03 pm" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8dc-8H-fbP">
-                                                                            <rect key="frame" x="74.5" y="0.0" width="194.5" height="19.5"/>
-                                                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                                            <color key="textColor" name="text_accessory"/>
-                                                                            <nil key="highlightedColor"/>
-                                                                            <userDefinedRuntimeAttributes>
-                                                                                <userDefinedRuntimeAttribute type="string" keyPath="dynamicTextSize" value="regular12"/>
-                                                                            </userDefinedRuntimeAttributes>
-                                                                        </label>
-                                                                    </subviews>
-                                                                </stackView>
-                                                                <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="3zy-aD-gFS">
-                                                                    <rect key="frame" x="0.0" y="25.5" width="269" height="17"/>
-                                                                    <subviews>
-                                                                        <imageView hidden="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_chat_time" translatesAutoresizingMaskIntoConstraints="NO" id="bjN-Qt-WnU">
-                                                                            <rect key="frame" x="0.0" y="4" width="0.0" height="9"/>
-                                                                        </imageView>
-                                                                        <imageView hidden="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_message_photo" translatesAutoresizingMaskIntoConstraints="NO" id="lWU-l1-a3S">
-                                                                            <rect key="frame" x="0.0" y="2.5" width="0.0" height="12"/>
-                                                                        </imageView>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" text="You added OVER140" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BSl-Co-y1G">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="225" height="17"/>
-                                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                            <color key="textColor" name="text_accessory"/>
-                                                                            <nil key="highlightedColor"/>
-                                                                            <userDefinedRuntimeAttributes>
-                                                                                <userDefinedRuntimeAttribute type="string" keyPath="dynamicTextSize" value="regular14"/>
-                                                                            </userDefinedRuntimeAttributes>
-                                                                        </label>
-                                                                        <imageView hidden="YES" userInteractionEnabled="NO" contentMode="right" horizontalHuggingPriority="750" verticalHuggingPriority="251" image="ic_chat_pin" translatesAutoresizingMaskIntoConstraints="NO" id="p7w-4E-Qsn">
-                                                                            <rect key="frame" x="228" y="1.5" width="0.0" height="14"/>
-                                                                        </imageView>
-                                                                        <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" image="ic_chat_mute" translatesAutoresizingMaskIntoConstraints="NO" id="EPn-2I-a8Z">
-                                                                            <rect key="frame" x="228" y="1.5" width="0.0" height="14"/>
-                                                                        </imageView>
-                                                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="752" verticalCompressionResistancePriority="752" text="@" textAlignment="center" lineBreakMode="headTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a00-2x-xHL" customClass="InsetLabel" customModule="Mixin" customModuleProvider="target">
-                                                                            <rect key="frame" x="231" y="0.5" width="16" height="16"/>
-                                                                            <color key="backgroundColor" name="theme"/>
-                                                                            <constraints>
-                                                                                <constraint firstAttribute="height" constant="16" id="jSl-gv-fJP"/>
-                                                                            </constraints>
-                                                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                            <nil key="highlightedColor"/>
-                                                                            <userDefinedRuntimeAttributes>
-                                                                                <userDefinedRuntimeAttribute type="string" keyPath="dynamicTextSize" value="regular12"/>
-                                                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                                                    <integer key="value" value="8"/>
-                                                                                </userDefinedRuntimeAttribute>
-                                                                            </userDefinedRuntimeAttributes>
-                                                                        </label>
-                                                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="752" verticalCompressionResistancePriority="752" text="1" textAlignment="center" lineBreakMode="headTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cQr-Dj-Umd" customClass="RoundedInsetLabel" customModule="Mixin" customModuleProvider="target">
-                                                                            <rect key="frame" x="253" y="0.5" width="16" height="16"/>
-                                                                            <color key="backgroundColor" name="theme"/>
-                                                                            <constraints>
-                                                                                <constraint firstAttribute="height" constant="16" id="Yaj-U9-465"/>
-                                                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" secondItem="cQr-Dj-Umd" secondAttribute="height" multiplier="1:1" id="jxo-v0-cqk"/>
-                                                                            </constraints>
-                                                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                            <nil key="highlightedColor"/>
-                                                                            <userDefinedRuntimeAttributes>
-                                                                                <userDefinedRuntimeAttribute type="string" keyPath="dynamicTextSize" value="regular12"/>
-                                                                            </userDefinedRuntimeAttributes>
-                                                                        </label>
-                                                                    </subviews>
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BtE-5x-Sut" customClass="AvatarImageView" customModule="Mixin" customModuleProvider="target">
+                                                                    <rect key="frame" x="0.0" y="15" width="50" height="50"/>
+                                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <constraints>
-                                                                        <constraint firstItem="a00-2x-xHL" firstAttribute="width" secondItem="a00-2x-xHL" secondAttribute="height" multiplier="1:1" priority="999" id="qny-nL-Kn5"/>
+                                                                        <constraint firstAttribute="width" secondItem="BtE-5x-Sut" secondAttribute="height" id="Bz3-u8-rnG"/>
+                                                                        <constraint firstAttribute="width" constant="50" id="v1y-3N-PYp"/>
                                                                     </constraints>
+                                                                    <userDefinedRuntimeAttributes>
+                                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="hasShadow" value="YES"/>
+                                                                    </userDefinedRuntimeAttributes>
+                                                                </view>
+                                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="bUb-Bj-2TW">
+                                                                    <rect key="frame" x="66" y="19" width="269" height="42.5"/>
+                                                                    <subviews>
+                                                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="A9Y-Y8-Hwn">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="269" height="19.5"/>
+                                                                            <subviews>
+                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="500" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" text="OVER140" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="67N-Qm-IWN">
+                                                                                    <rect key="frame" x="0.0" y="0.0" width="68.5" height="19.5"/>
+                                                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
+                                                                                    <color key="textColor" name="text"/>
+                                                                                    <nil key="highlightedColor"/>
+                                                                                </label>
+                                                                                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="750" verticalHuggingPriority="251" image="ic_user_bot" translatesAutoresizingMaskIntoConstraints="NO" id="Jnj-lJ-Kay">
+                                                                                    <rect key="frame" x="71.5" y="0.0" width="0.0" height="19.5"/>
+                                                                                </imageView>
+                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="4:03 pm" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8dc-8H-fbP">
+                                                                                    <rect key="frame" x="74.5" y="0.0" width="194.5" height="19.5"/>
+                                                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                                                    <color key="textColor" name="text_accessory"/>
+                                                                                    <nil key="highlightedColor"/>
+                                                                                    <userDefinedRuntimeAttributes>
+                                                                                        <userDefinedRuntimeAttribute type="string" keyPath="dynamicTextSize" value="regular12"/>
+                                                                                    </userDefinedRuntimeAttributes>
+                                                                                </label>
+                                                                            </subviews>
+                                                                        </stackView>
+                                                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="3zy-aD-gFS">
+                                                                            <rect key="frame" x="0.0" y="25.5" width="269" height="17"/>
+                                                                            <subviews>
+                                                                                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_chat_time" translatesAutoresizingMaskIntoConstraints="NO" id="bjN-Qt-WnU">
+                                                                                    <rect key="frame" x="0.0" y="4" width="0.0" height="9"/>
+                                                                                </imageView>
+                                                                                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_message_photo" translatesAutoresizingMaskIntoConstraints="NO" id="lWU-l1-a3S">
+                                                                                    <rect key="frame" x="0.0" y="2.5" width="0.0" height="12"/>
+                                                                                </imageView>
+                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" text="You added OVER140" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BSl-Co-y1G">
+                                                                                    <rect key="frame" x="0.0" y="0.0" width="225" height="17"/>
+                                                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                                    <color key="textColor" name="text_accessory"/>
+                                                                                    <nil key="highlightedColor"/>
+                                                                                    <userDefinedRuntimeAttributes>
+                                                                                        <userDefinedRuntimeAttribute type="string" keyPath="dynamicTextSize" value="regular14"/>
+                                                                                    </userDefinedRuntimeAttributes>
+                                                                                </label>
+                                                                                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="right" horizontalHuggingPriority="750" verticalHuggingPriority="251" image="ic_chat_pin" translatesAutoresizingMaskIntoConstraints="NO" id="p7w-4E-Qsn">
+                                                                                    <rect key="frame" x="228" y="1.5" width="0.0" height="14"/>
+                                                                                </imageView>
+                                                                                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" image="ic_chat_mute" translatesAutoresizingMaskIntoConstraints="NO" id="EPn-2I-a8Z">
+                                                                                    <rect key="frame" x="228" y="1.5" width="0.0" height="14"/>
+                                                                                </imageView>
+                                                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="752" verticalCompressionResistancePriority="752" text="@" textAlignment="center" lineBreakMode="headTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a00-2x-xHL" customClass="InsetLabel" customModule="Mixin" customModuleProvider="target">
+                                                                                    <rect key="frame" x="231" y="0.5" width="16" height="16"/>
+                                                                                    <color key="backgroundColor" name="theme"/>
+                                                                                    <constraints>
+                                                                                        <constraint firstAttribute="height" constant="16" id="jSl-gv-fJP"/>
+                                                                                    </constraints>
+                                                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                    <nil key="highlightedColor"/>
+                                                                                    <userDefinedRuntimeAttributes>
+                                                                                        <userDefinedRuntimeAttribute type="string" keyPath="dynamicTextSize" value="regular12"/>
+                                                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                                            <integer key="value" value="8"/>
+                                                                                        </userDefinedRuntimeAttribute>
+                                                                                    </userDefinedRuntimeAttributes>
+                                                                                </label>
+                                                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="752" verticalCompressionResistancePriority="752" text="1" textAlignment="center" lineBreakMode="headTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cQr-Dj-Umd" customClass="RoundedInsetLabel" customModule="Mixin" customModuleProvider="target">
+                                                                                    <rect key="frame" x="253" y="0.5" width="16" height="16"/>
+                                                                                    <color key="backgroundColor" name="theme"/>
+                                                                                    <constraints>
+                                                                                        <constraint firstAttribute="height" constant="16" id="Yaj-U9-465"/>
+                                                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" secondItem="cQr-Dj-Umd" secondAttribute="height" multiplier="1:1" id="jxo-v0-cqk"/>
+                                                                                    </constraints>
+                                                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                    <nil key="highlightedColor"/>
+                                                                                    <userDefinedRuntimeAttributes>
+                                                                                        <userDefinedRuntimeAttribute type="string" keyPath="dynamicTextSize" value="regular12"/>
+                                                                                    </userDefinedRuntimeAttributes>
+                                                                                </label>
+                                                                            </subviews>
+                                                                            <constraints>
+                                                                                <constraint firstItem="a00-2x-xHL" firstAttribute="width" secondItem="a00-2x-xHL" secondAttribute="height" multiplier="1:1" priority="999" id="qny-nL-Kn5"/>
+                                                                            </constraints>
+                                                                        </stackView>
+                                                                    </subviews>
                                                                 </stackView>
                                                             </subviews>
-                                                        </stackView>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="trailing" secondItem="bUb-Bj-2TW" secondAttribute="trailing" id="2Ch-93-Cot"/>
+                                                                <constraint firstItem="bUb-Bj-2TW" firstAttribute="leading" secondItem="BtE-5x-Sut" secondAttribute="trailing" constant="16" id="PbA-Z4-LJ5"/>
+                                                                <constraint firstItem="BtE-5x-Sut" firstAttribute="leading" secondItem="3gq-1E-cfc" secondAttribute="leading" id="ZHH-LK-O5e"/>
+                                                                <constraint firstItem="bUb-Bj-2TW" firstAttribute="centerY" secondItem="3gq-1E-cfc" secondAttribute="centerY" id="ab7-ZK-tlc"/>
+                                                                <constraint firstItem="BtE-5x-Sut" firstAttribute="centerY" secondItem="3gq-1E-cfc" secondAttribute="centerY" id="sam-Z3-xHh"/>
+                                                            </constraints>
+                                                        </view>
                                                     </subviews>
                                                     <constraints>
-                                                        <constraint firstItem="BtE-5x-Sut" firstAttribute="leading" secondItem="90f-QB-8PF" secondAttribute="leading" constant="20" id="0Hg-Sb-20f"/>
-                                                        <constraint firstItem="bUb-Bj-2TW" firstAttribute="leading" secondItem="BtE-5x-Sut" secondAttribute="trailing" constant="16" id="79h-ZR-gXd"/>
-                                                        <constraint firstAttribute="trailing" secondItem="bUb-Bj-2TW" secondAttribute="trailing" constant="20" id="UFT-Vv-4Iy"/>
-                                                        <constraint firstItem="bUb-Bj-2TW" firstAttribute="centerY" secondItem="90f-QB-8PF" secondAttribute="centerY" constant="1" id="mSm-8I-NPp"/>
-                                                        <constraint firstItem="BtE-5x-Sut" firstAttribute="centerY" secondItem="90f-QB-8PF" secondAttribute="centerY" id="u6d-Fp-xtx"/>
+                                                        <constraint firstAttribute="trailing" secondItem="3gq-1E-cfc" secondAttribute="trailing" constant="20" id="2AO-JR-1Nd"/>
+                                                        <constraint firstItem="3gq-1E-cfc" firstAttribute="leading" secondItem="90f-QB-8PF" secondAttribute="leading" constant="20" id="59q-Mt-YmH"/>
+                                                        <constraint firstItem="3gq-1E-cfc" firstAttribute="top" secondItem="90f-QB-8PF" secondAttribute="top" id="AYe-aC-2ws"/>
+                                                        <constraint firstAttribute="bottom" secondItem="3gq-1E-cfc" secondAttribute="bottom" id="yW7-fx-mEz"/>
                                                     </constraints>
                                                 </tableViewCellContentView>
                                                 <color key="backgroundColor" name="background"/>
