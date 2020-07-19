@@ -11,7 +11,12 @@ class UserHandleWrapperView: UIView {
         }
     }
     
-    private lazy var userHandleMaskView = UIView()
+    private lazy var userHandleMaskView: UIView = {
+        let view = UIView()
+        view.isUserInteractionEnabled = false
+        view.backgroundColor = .red
+        return view
+    }()
     
     override func layoutSubviews() {
         super.layoutSubviews()
@@ -32,10 +37,10 @@ class UserHandleWrapperView: UIView {
         }
         addSubview(view)
         view.snp.makeEdgesEqualToSuperview()
-        if mask == nil {
-            userHandleMaskView.backgroundColor = .white
-            mask = userHandleMaskView
+        if userHandleMaskView.superview != nil {
+            userHandleMaskView.removeFromSuperview()
         }
+        mask = userHandleMaskView
     }
     
     private func layoutMaskView(height: CGFloat) {
